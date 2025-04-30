@@ -36,7 +36,7 @@ int renderX1() {
   return x1;
 }
 
-int renderX1() {
+int renderX2() {
   printf("\033[H\033[J");
 
   int x2;
