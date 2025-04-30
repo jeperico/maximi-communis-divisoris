@@ -12,3 +12,9 @@ bool generatePrime(int number) {
 
   return true;
 }
+
+void renderPrime(int n) {
+  for (int i = 0; i < n; i++) {
+    if (generatePrime(i)) printf("%d\n", i);
+  }
+}
