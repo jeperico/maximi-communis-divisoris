@@ -3,4 +3,5 @@
 
 void main() {
   generateMMC(172, 2123);
+  generateMDC(24, 15);
 }
