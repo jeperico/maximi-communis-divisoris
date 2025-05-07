@@ -9,6 +9,8 @@
     ".env.*": "dotenv",
     ".prettierrc": "json",
     "*.css": "css",
-    "utils.h": "c"
+    "utils.h": "c",
+    "stdio.h": "c",
+    "stdbool.h": "c"
   }
 }
