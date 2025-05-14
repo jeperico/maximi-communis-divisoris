@@ -3,8 +3,6 @@
 #include "errors/err.h"
 
 void main() {
-  renderTable();
-
   renderMMC();
   renderMDC();
 

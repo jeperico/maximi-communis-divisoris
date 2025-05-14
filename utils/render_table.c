@@ -2,25 +2,9 @@
 #include <stdbool.h>
 #include "../errors/err.h"
 
-void renderTable() {
+void renderTable(char *text) {
   printf("\n\n +------------------+\n");
-  printf("<| %-16s |>\n", "Choise:");
-  printf(" +------------------+\n\n");
-}
-
-void renderMMC() {
-  printf("\033[H\033[J");
-
-  printf("\n\n +------------------+\n");
-  printf("<| %-16s |>\n", "MMC:");
-  printf(" +------------------+\n\n");
-}
-
-void renderMDC() {
-  printf("\033[H\033[J");
-
-  printf("\n\n +------------------+\n");
-  printf("<| %-16s |>\n", "MDC:");
+  printf("<| %-16s |>\n", text);
   printf(" +------------------+\n\n");
 }
 
@@ -31,9 +15,7 @@ int renderX1(bool retry) {
 
   if(retry) invalidInput();
 
-  printf("\n\n +------------------+\n");
-  printf("<| %-16s |>\n", "INPUT X1:");
-  printf(" +------------------+\n\n");
+  renderTable("INPUT X1:");
   scanf("%d", &x1);
 
   if (x1 < 1) renderX1(true);
@@ -47,9 +29,7 @@ int renderX2(bool retry) {
   
   int x2;
   
-  printf("\n\n +------------------+\n");
-  printf("<| %-16s |>\n", "INPUT X2:");
-  printf(" +------------------+\n\n");
+  renderTable("INPUT X2:");
   scanf("%d", &x2);
   
   if (x2 < 1) renderX1(true);
