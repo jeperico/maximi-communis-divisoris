@@ -3,9 +3,6 @@
 #include "errors/err.h"
 
 void main() {
-  renderMMC();
-  renderMDC();
-
   int x1 = renderX1(false);
   int x2 = renderX2(false);
 
