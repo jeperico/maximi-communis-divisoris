@@ -29,7 +29,7 @@ int renderX1(bool retry) {
 
   int x1;
 
-  // if(retry) invalidInput();
+  if(retry) invalidInput();
 
   printf("\n\n +------------------+\n");
   printf("<| %-16s |>\n", "INPUT X1:");
@@ -37,14 +37,13 @@ int renderX1(bool retry) {
   scanf("%d", &x1);
 
   if (x1 < 1) renderX1(true);
-
-  return x1;
+  else return x1;
 }
 
 int renderX2(bool retry) {
   printf("\033[H\033[J");
   
-  // if(retry) invalidInput();
+  if(retry) invalidInput();
   
   int x2;
   
@@ -54,6 +53,5 @@ int renderX2(bool retry) {
   scanf("%d", &x2);
   
   if (x2 < 1) renderX1(true);
-
-  return x2;
+  else return x2;
 }
