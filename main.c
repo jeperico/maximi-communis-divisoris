@@ -1,13 +1,27 @@
 #include <stdio.h>
+#include <stdbool.h>
+#include <ctype.h>
 #include "utils/utils.h"
 #include "errors/err.h"
 
 void main() {
-  int x1 = renderX1(false);
-  int x2 = renderX2(false);
+  bool retry = true;
+  do {
+    int x1 = renderX1(false);
+    int x2 = renderX2(false);
+  
+    printf("\033[H\033[J");
+  
+    generateMMC(x1, x2);
+    generateMDC(x1, x2);
 
-  printf("\033[H\033[J");
+    char userInput;
+    printf("Do you want to continue? (Y or N): ");
+    scanf(" %c", &userInput);
+    userInput = toupper(userInput);
 
-  generateMMC(x1, x2);
-  generateMDC(x1, x2);
+    if (userInput != 'Y') {
+      retry = false;
+    }
+  } while (retry);
 }

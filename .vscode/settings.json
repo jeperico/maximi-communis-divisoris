@@ -11,6 +11,7 @@
     "*.css": "css",
     "utils.h": "c",
     "stdio.h": "c",
-    "stdbool.h": "c"
+    "stdbool.h": "c",
+    "err.h": "c"
   }
 }
